@@ -13,11 +13,6 @@ public class testDriver {
 
 		float[] elems = {32, 45, 16, 18, 9, 33};
 		FischerHeunRMQ fh = new FischerHeunRMQ(elems);
-		String res = fh.cartesianHashCode(elems);
-		System.out.format("hash code: %s\n", res);
-
-		elems[0] = 50;
-		res = fh.cartesianHashCode(elems);
-		System.out.format("hash code: %s\n", res);
+		fh.test();
 	}
 }

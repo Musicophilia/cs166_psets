@@ -19,7 +19,7 @@ public class FischerHeunRMQ implements RMQ {
     /**
     * gets the hashcode for the cartesian tree associated with the ArrayList associated with elems.
     */
-    public String cartesianHashCode(float[] elems){
+    private String cartesianHashCode(float[] elems){
         BitSet result = new BitSet(elems.length);
         Integer hashCodeIndex = 0;
         Deque<Float> stack = new ArrayDeque<Float>();
@@ -36,6 +36,21 @@ public class FischerHeunRMQ implements RMQ {
         return result.toString();
 
     }
+
+    /**
+    * A function to test components of this file
+    */
+    public void test(){
+        System.out.print("Testing Fischer-Heun\n");
+        float[] elems = {32, 45, 16, 18, 9, 33};
+        String res = this.cartesianHashCode(elems);
+        System.out.format("hash code: %s\n", res);
+
+        elems[0] = 50;
+        res = this.cartesianHashCode(elems);
+        System.out.format("hash code: %s\n", res);
+    }
+
     /**
      * Evaluates RMQ(i, j) over the array stored by the constructor, returning
      * the index of the minimum value in that range.
