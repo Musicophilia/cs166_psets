@@ -1,8 +1,11 @@
-CLASSFILES = RMQDriver.class driver/RMQFactory.class rmq/PrecomputedRMQ.class rmq/SparseTableRMQ.class rmq/HybridRMQ.class rmq/FischerHeunRMQ.class
+CLASSFILES = testDriver.class RMQDriver.class driver/RMQFactory.class rmq/PrecomputedRMQ.class rmq/SparseTableRMQ.class rmq/HybridRMQ.class rmq/FischerHeunRMQ.class
 
 all: $(CLASSFILES)
 
 RMQDriver.class: RMQDriver.java
+	javac $<
+
+testDriver.class: testDriver.java
 	javac $<
 
 driver/RMQFactory.class: driver/RMQFactory.java
