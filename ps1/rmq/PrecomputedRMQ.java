@@ -34,6 +34,7 @@ public class PrecomputedRMQ implements RMQ {
                         dpTable[j][j+i] = dpTable[j+1][j+i];
                     }
                 }
+                // dpTable[j][j+i] = 0;
             }
         }
     }
