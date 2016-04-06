@@ -21,7 +21,7 @@ public class RMQDriver {
 		
 		/* Get a reference factory so we can double-check answers. */
 		RMQFactory ourFactory = createRMQFactoryFor("oursolution.SparseTable");
-		
+//		RMQFactory ourFactory = createRMQFactoryFor("SparseTable");
 		/* Run some tests! */
 		runSmallTests(theirFactory, ourFactory, rand);
 		runLargeTests(theirFactory, ourFactory, rand);
@@ -227,7 +227,8 @@ public class RMQDriver {
 			/* Choose i and j for the probe. */
 			int i = rand.nextInt(elems.length);
 			int j = i + rand.nextInt(elems.length - i);
-			
+//			System.out.println("i=" + i);
+//			System.out.println("j=" + j);
 			/* Evaluate RMQ on the points. */
 			int ourSoln   = ours.rmq(i, j);
 			int theirSoln = theirs.rmq(i, j);
